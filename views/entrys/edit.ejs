@@ -12,7 +12,8 @@
     <%- include('../partials/_navbar.ejs') %>
         <h1>Edit <%= entry.entry %>
         </h1>
-        <form action="/users/<%= user._id %>/entrys" method="POST">
+        <form   action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=PUT"
+            method="POST"
 
             <label for="date">Today's Date:</label>
             <input

@@ -72,4 +72,22 @@ router.get('/:entryId', async (req, res) => {
     }
   });
 
+  // controllers/applications.js`
+
+router.put('/:entryId', async (req, res) => {
+    try {
+      const currentUser = await User.findById(req.session.user._id);
+      const entry = currentUser.entrys.id(req.params.entryId);
+      entry.set(req.body);
+      await currentUser.save();
+      res.redirect(
+        `/users/${currentUser._id}/entrys/${req.params.entryId}`
+      );
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
+  
+
 module.exports = router;
