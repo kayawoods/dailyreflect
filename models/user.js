@@ -7,7 +7,7 @@ const entrySchema = new mongoose.Schema({
   },
   entry: {
     type: String,
-    maxlength: 1, 
+    // maxlength: 1, 
   },
   public: {
     type: String,
