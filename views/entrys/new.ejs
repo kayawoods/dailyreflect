@@ -12,7 +12,7 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
         <h1>Add a New Entry</h1>
-        <form action="/submit" method="POST">
+        <form action="/users/<%= user._id %>/entrys" method="POST">
         <label for="date">Today's Date:</label>
         <input type="date" name="date" id="date" required/>
 
