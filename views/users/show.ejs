@@ -12,16 +12,14 @@
     <% if (entrys && entrys.length > 0) { %>
         <ul>
             <% entrys.forEach(entry => { %>
-                <li><%= entry.entry %>
-                </li>
-            <% }); %>
-        </ul>
+                <% if (entry.public === "Share") { %> 
+                    <li><%= entry.entry %></li>
+                <% } %> 
+            <% }); %> 
     <% } else { %>
         <p>No Entrys</p>
     <% } %>
 
     <a href="/">Back to My Entrys</a>
   </body>
-</html>
-
 </html>
