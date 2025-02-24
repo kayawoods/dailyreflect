@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editing <%= entry.entry %>
+    </title>
+</head>
+
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+        <h1>Edit <%= entry.entry %>
+        </h1>
+        <form action="/users/<%= user._id %>/entrys" method="POST">
+
+            <label for="date">Today's Date:</label>
+            <input
+             type="date"
+             name="date"
+              id="date" 
+              value="<%= entry.date %>"
+              required 
+              >
+
+            <label for="entry"> 1 Sentence Entry:</label>
+            <textarea
+             name="entry"
+              id="entry" 
+              rows="3"
+              required
+             ><%= entry.entry %></textarea>
+               
+              
+
+            <label for="public">Share?:</label>
+            <select id="public" name="public" required>
+                <option 
+                value="Share" 
+                <%= entry.public === 'Share' ? 'selected' : '' %>
+            >
+                Share 🫂
+            </option>
+            <option 
+                value="Vault" 
+                <%= entry.public === 'Vault' ? 'selected' : '' %>
+            >
+                Vault 🔒
+            </option>
+        </select>
+            <button type="submit">Submit</button>
+        </form>
+</body>
+
+</html>

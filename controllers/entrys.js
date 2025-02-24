@@ -59,4 +59,17 @@ router.get('/:entryId', async (req, res) => {
     }
   });
 
+  router.get('/:entryId/edit', async (req, res) => {
+    try {
+      const currentUser = await User.findById(req.session.user._id);
+      const entry = currentUser.entrys.id(req.params.entryId);
+      res.render('entrys/edit.ejs', {
+        entry: entry,
+      });
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
+
 module.exports = router;
