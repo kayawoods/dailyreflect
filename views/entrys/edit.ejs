@@ -13,7 +13,7 @@
         <h1>Edit <%= entry.entry %>
         </h1>
         <form   action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=PUT"
-            method="POST"
+            method="POST">
 
             <label for="date">Today's Date:</label>
             <input

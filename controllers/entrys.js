@@ -68,26 +68,31 @@ router.get('/:entryId', async (req, res) => {
       });
     } catch (error) {
       console.log(error);
-      res.redirect('/');
+      res.redirect('/users');
     }
   });
 
-  // controllers/applications.js`
-
-router.put('/:entryId', async (req, res) => {
+  router.put('/:entryId', async (req, res) => {
     try {
-      const currentUser = await User.findById(req.session.user._id);
-      const entry = currentUser.entrys.id(req.params.entryId);
-      entry.set(req.body);
-      await currentUser.save();
-      res.redirect(
-        `/users/${currentUser._id}/entrys/${req.params.entryId}`
-      );
+        const currentUser = await User.findById(req.session.user._id);
+        const entry = currentUser.entrys.id(req.params.entryId);
+
+        if (entry) {
+            entry.set(req.body);
+            await currentUser.save();
+        }
+
+        res.redirect(`/users/${currentUser._id}/entrys`); 
     } catch (error) {
-      console.log(error);
-      res.redirect('/');
+        console.log(error);
+        res.redirect('/');
     }
-  });
-  
+});
+
+
 
 module.exports = router;
+    
+
+
+
