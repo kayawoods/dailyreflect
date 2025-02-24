@@ -47,4 +47,16 @@ router.get('/:entryId', async (req, res) => {
     }
   });
   
+  router.delete('/:entryId', async (req, res) => {
+    try {
+      const currentUser = await User.findById(req.session.user._id);
+      currentUser.entrys.id(req.params.entryId).deleteOne();
+      await currentUser.save();
+      res.redirect(`/users/${currentUser._id}/entrys`);
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
+
 module.exports = router;

@@ -13,6 +13,12 @@
     <% if (entry.entry) { %>
     <p>Date: <%= entry.date %></p>
     <% } %>
-    <p>Shared to Community: <%= entry.public %></p>
+    <p>Visibility: <%= entry.public %></p>
+    <form
+    action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE"
+    method="POST"
+  >
+    <button type="submit">Delete this Entry</button>
+  </form>
   </body>
 </html>
