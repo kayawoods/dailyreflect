@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/user.js');
+const Prompt = require('../models/prompt.js')
 
 router.get('/', async (req, res) => {
     try {
@@ -17,7 +18,11 @@ router.get('/', async (req, res) => {
   });
 
   router.get('/new', async (req, res) => {
-    res.render('entrys/new.ejs');
+  const currentPrompt = await Prompt.findById('67be017a0ac72f5b7249ec1a')
+  console.log(currentPrompt)
+    res.render('entrys/new.ejs', {
+      prompt : currentPrompt
+    });
   });
 
   router.post('/', async (req, res) => {
@@ -88,6 +93,8 @@ router.get('/:entryId', async (req, res) => {
         res.redirect('/');
     }
 });
+
+
 
 
 

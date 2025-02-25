@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const promptSchema = new mongoose.Schema({
-  prompt: {
+  question: {
     type: String,
   },
+
 });
 
 
