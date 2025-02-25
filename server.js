@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const session = require('express-session');
 
 const isSignedIn = require('./middleware/is-signed-in.js');
@@ -16,6 +16,7 @@ const usersController = require('./controllers/users.js');
 
 
 const port = process.env.PORT ? process.env.PORT : '3000';
+const path = require('path');
 
 
 
@@ -28,6 +29,7 @@ mongoose.connection.on('connected', () => {
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 // app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -35,6 +37,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+
 
 app.use(passUserToView);
 
