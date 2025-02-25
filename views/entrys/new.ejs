@@ -8,22 +8,21 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-        <h1>Add a New Entry</h1>
-        <form action="/users/<%= user._id %>/entrys" method="POST">
+    <h1>Add a New Entry</h1>
+    <h3><%= prompt.question %></h3> 
+    <form action="/users/<%= user._id %>/entrys" method="POST">
         <label for="date">Today's Date:</label>
-        <input type="date" name="date" id="date" required/>
-
-        <label for="entry"> 1 Sentence Entry:</label>
-        <textarea name="entry" id="entry" rows="3" required"></textarea>
-
+        <input type="date" name="date" id="date" required>
+        <label for="entry">1 Sentence Entry:</label>
+        <textarea name="entry" id="entry" rows="3" required></textarea>
         <label for="public">Share?:</label>
         <select id="public" name="public" required>
             <option value="Share">Share 🫂</option>
             <option value="Vault">Vault 🔒</option>
-    </select> 
-    <button type="submit">Submit</button>
-</form>
-<h3> <%=prompt.question%></h3>
+        </select> 
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
+
 

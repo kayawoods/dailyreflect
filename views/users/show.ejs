@@ -13,6 +13,7 @@
     <% if (entrys && entrys.length > 0) { %>
         <ul>
             <% entrys.forEach(entry => { %>
+            <%=entry.prompt.question%>
                 <% if (entry.public === "Share") { %> 
                     <li><%= entry.entry %></li>
                 <% } %> 

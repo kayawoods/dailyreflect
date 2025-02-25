@@ -18,7 +18,8 @@ router.get('/', async (req, res) => {
   });
 
   router.get('/new', async (req, res) => {
-  const currentPrompt = await Prompt.findById('67be017a0ac72f5b7249ec1a')
+  const prompts = await Prompt.find()
+  const currentPrompt = prompts[Math.floor(Math.random() * prompts.length)]
   console.log(currentPrompt)
     res.render('entrys/new.ejs', {
       prompt : currentPrompt
@@ -27,8 +28,17 @@ router.get('/', async (req, res) => {
 
   router.post('/', async (req, res) => {
     try {
+    
       const currentUser = await User.findById(req.session.user._id);
-      currentUser.entrys.push(req.body);
+      // currentUser.entrys.push(req.body);
+      const {entry, public, promptId} = req.body // extract data from req.body
+      const newEntry = {
+        date, 
+        entry, 
+        public, 
+        prompt: promptId
+      }
+      currentUser.entrys.push(newEntry) // to add new entry to entry array 
       await currentUser.save();
       res.redirect(`/users/${currentUser._id}/entrys`);
     } catch (error) {
