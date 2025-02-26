@@ -33,7 +33,7 @@ router.get('/', async (req, res) => {
       // currentUser.entrys.push(req.body);
       const {entry, public, prompt, date} = req.body // extract data from req.body (req.body relates to form input)
       const newEntry = {
-        date, 
+        date: new Date(date + "T00:00:00Z"), 
         entry, 
         public, 
         prompt: prompt
