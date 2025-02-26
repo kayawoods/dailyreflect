@@ -10,19 +10,21 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= entry.entry %> </h1>
+
+    <h1><%= entry.entry %></h1>
+
     <% if (entry.entry) { %>
-    <p>Date: <%= entry.date %></p>
+      <p>Date: <%= entry.date %></p>
     <% } %>
+
     <p>Visibility: <%= entry.public %></p>
+
     <a href="/users/<%= user._id %>/entrys/<%= entry._id %>/edit">
-        Append this Entry
-      </a>
-    <form
-    action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE"
-    method="POST"
-  >
-    <button type="submit">Delete this Entry</button>
-  </form>
+      Append this Entry
+    </a>
+    <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete this Entry</button>
+    </form>
   </body>
 </html>
+

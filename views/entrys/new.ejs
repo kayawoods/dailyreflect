@@ -11,6 +11,7 @@
     <h1>Add a New Entry</h1>
     <h3><%= prompt.question %></h3> 
     <form action="/users/<%= user._id %>/entrys" method="POST">
+        <input type="string" name="prompt" value="<%=prompt._id%>" id="prompt" required hidden>
         <label for="date">Today's Date:</label>
         <input type="date" name="date" id="date" required>
         <label for="entry">1 Sentence Entry:</label>
@@ -26,3 +27,4 @@
 </html>
 
 
+ 

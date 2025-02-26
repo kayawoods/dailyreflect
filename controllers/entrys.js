@@ -31,12 +31,12 @@ router.get('/', async (req, res) => {
     
       const currentUser = await User.findById(req.session.user._id);
       // currentUser.entrys.push(req.body);
-      const {entry, public, promptId} = req.body // extract data from req.body
+      const {entry, public, prompt, date} = req.body // extract data from req.body (req.body relates to form input)
       const newEntry = {
         date, 
         entry, 
         public, 
-        prompt: promptId
+        prompt: prompt
       }
       currentUser.entrys.push(newEntry) // to add new entry to entry array 
       await currentUser.save();
@@ -87,6 +87,9 @@ router.get('/:entryId', async (req, res) => {
     }
   });
 
+
+
+
   router.put('/:entryId', async (req, res) => {
     try {
         const currentUser = await User.findById(req.session.user._id);
@@ -113,3 +116,4 @@ module.exports = router;
 
 
 
+// js date constructor - grab current date and use conditional logic . able to accurately get todays date, compare current date if there is entry for date that exists 
