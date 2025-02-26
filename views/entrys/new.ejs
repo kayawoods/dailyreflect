@@ -10,6 +10,7 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Entry</h1>
     <h3><%= prompt.question %></h3> 
+    <div class="new-body">
     <form action="/users/<%= user._id %>/entrys" method="POST">
         <input type="string" name="prompt" value="<%=prompt._id%>" id="prompt" required hidden>
         <label for="date">Today's Date:</label>
@@ -23,6 +24,7 @@
         </select> 
         <button type="submit">Submit</button>
     </form>
+</div>
 </body>
 </html>
 

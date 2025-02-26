@@ -5,12 +5,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= entry.entry %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <p><strong>Prompt: </strong><%=entry.prompt.question%>  </p>
+    <div class="show-body">
+      <div class="show-header">
+        <p><strong>Prompt: </strong><%=entry.prompt.question%>  </p>
+    <div class="show-sidebar"> 
+      <div class="show-actions"> 
+        <a
               <%  { %>
               </p><strong>Answer: </strong> <%= entry.entry %></p>
                   <% } %>
@@ -19,13 +24,19 @@
 
     <% } %>
     <p>Visibility: <%= entry.public %></p>
-
+>
     <a href="/users/<%= user._id %>/entrys/<%= entry._id %>/edit">
       Append this Entry
+  
     </a>
-    <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE" method="POST">
+    <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE" 
+      method="POST"
+      >
       <button type="submit">Delete this Entry</button>
     </form>
+  </div> 
+  </div>
+  </div>
   </body>
 </html>
 
