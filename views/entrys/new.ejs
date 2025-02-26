@@ -13,7 +13,8 @@
     <form action="/users/<%= user._id %>/entrys" method="POST">
         <input type="string" name="prompt" value="<%=prompt._id%>" id="prompt" required hidden>
         <label for="date">Today's Date:</label>
-        <input type="date" name="date" id="date" required>
+        <input type="date" name="date" id="date" required value="<%= new Date(entry.date).toISOString().split('T')[0] %>">
+
         <label for="entry">1 Sentence Entry:</label>
         <textarea name="entry" id="entry" rows="3" required></textarea>
         <label for="public">Share?:</label>

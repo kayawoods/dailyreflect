@@ -16,14 +16,10 @@
         <form   action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=PUT"
             method="POST">
 
-            <label for="date">Today's Date:</label>
-            <input
-             type="date"
-             name="date"
-              id="date" 
-              value="<%= entry.date %>"
-              required 
-              >
+           <input type="date" name="date" id="date" 
+       value="<%= entry.date ? new Date(entry.date).toISOString().split('T')[0] : '' %>" 
+       required> 
+
 
             <label for="entry"> 1 Sentence Entry:</label>
             <textarea
