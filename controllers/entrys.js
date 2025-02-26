@@ -45,6 +45,7 @@ router.get('/', async (req, res) => {
       console.log(error);
       res.redirect('/');
     }
+    
   });
 
   // controllers/applications.js
