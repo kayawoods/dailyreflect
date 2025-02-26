@@ -52,10 +52,11 @@ router.get('/', async (req, res) => {
 
 router.get('/:entryId', async (req, res) => {
     try {
-      const currentUser = await User.findById(req.session.user._id);
+      const currentUser = await User.findById(req.session.user._id).populate('entrys.prompt');
       const entry = currentUser.entrys.id(req.params.entryId);
       res.render('entrys/show.ejs', {
         entry: entry,
+        // prompt: entry.prompt 
       });
     } catch (error) {
       console.log(error);

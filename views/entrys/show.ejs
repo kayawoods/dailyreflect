@@ -10,14 +10,14 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-
-    <h1><%= entry.entry %></h1>
-
+    <p><strong>Prompt: </strong><%=entry.prompt.question%>  </p>
+              <%  { %>
+              </p><strong>Answer: </strong> <%= entry.entry %></p>
+                  <% } %>
     <% if (entry.entry) { %>
       <p>Date: <%= new Date(entry.date).toISOString().split('T')[0] %></p>
 
     <% } %>
-
     <p>Visibility: <%= entry.public %></p>
 
     <a href="/users/<%= user._id %>/entrys/<%= entry._id %>/edit">

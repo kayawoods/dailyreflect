@@ -14,7 +14,7 @@ const entrySchema = new mongoose.Schema({
     enum: ['Vault', 'Share'],
   },
   prompt: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId, //need populate to show more 
     ref: 'Prompt',
   },
 });
