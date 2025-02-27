@@ -8,23 +8,33 @@
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a New Entry</h1>
-    <h3><%= prompt.question %></h3> 
+    
     <div class="new-body">
-    <form action="/users/<%= user._id %>/entrys" method="POST">
-        <input type="string" name="prompt" value="<%=prompt._id%>" id="prompt" required hidden>
-        <label for="date">Today's Date:</label>
-        <input type="date" name="date" id="date" required>
-        <label for="entry">Entry:</label>
-        <textarea name="entry" id="entry" rows="3" required></textarea>
-        <label for="public">Share?:</label>
-        <select id="public" name="public" required>
-            <option value="Share">Share 🫂</option>
-            <option value="Vault">Vault 🔒</option>
-        </select> 
-        <button type="submit">Submit</button>
-    </form>
-</div>
+        <h1>Add a New Entry</h1>
+        <h3><%= prompt.question %></h3> 
+        
+        <form action="/users/<%= user._id %>/entrys" method="POST">
+            <input type="hidden" name="prompt" value="<%=prompt._id%>" id="prompt" required>
+            
+            <label for="date">Today's Date:</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="entry">Entry:</label>
+            <div class="entry-container">
+                <textarea name="entry" id="entry" rows="3" required></textarea>
+            </div>
+
+            <label for="public">Status:</label>
+            <div class="share-container">
+                <select id="public" name="public" required>
+                    <option value="Share">Share</option>
+                    <option value="Vault">Vault 🔒</option>
+                </select> 
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
 
