@@ -116,30 +116,38 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh; 
+  background: url('https://github.com/kayawoods/dailyreflect/blob/main/Untitled%20design%20(7).png?raw=true') no-repeat center; 
 }
 
 h1 {
   color: #1c2e5b;
+  font-family: 'Playfair Display', serif; 
+  font-size: 2.4em; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px; 
 }
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 20em;
+  width: 22em;
   height: 50%;
-  background-color: #f6e7e7;
-  padding: 30px 40px 20px 40px;
-  border-radius: 20px;
-  color: #4b598e;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px; 
+  border-radius: 12px;
+  color: #1c2e5b; 
   font-weight: bold;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1); 
 }
 
 input {
-  border: 1px solid rgb(182, 182, 182);
-  padding: 8px;
+  border: 2px solid rgb(182, 182, 182);
+  padding: 10px;
   border-radius: 10px;
+  font-size: 1em; 
+  transition: all 0.3s ease-in-out; 
 }
 
 button {
