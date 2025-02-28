@@ -2,41 +2,45 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/show.css" />
-    <title><%= entry.entry %></title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
-    <div class="show-body">
-      <div class="show-header">
-        <p><strong>Prompt: </strong><%=entry.prompt.question%>  </p>
-    <div class="show-sidebar"> 
-      <div class="show-actions"> 
-        <a
-              <%  { %>
-              </p><strong>Answer: </strong> <%= entry.entry %></p>
-                  <% } %>
-    <% if (entry.entry) { %>
-      <p>Date: <%= new Date(entry.date).toISOString().split('T')[0] %></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title><%= entry.entry %></title>
+</head>
 
-    <% } %>
-    <p>Visibility: <%= entry.public %></p>
->
-    <a href="/users/<%= user._id %>/entrys/<%= entry._id %>/edit">
-      Append this Entry
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+
+  <div class="all-entrys-body">
+    <div class="all-entrys-header">
+      <h1>Your Entry</h1>
+      <a class="add-entry-link" href="/users/<%= user._id %>/entrys/new">Add an Entry</a>
+    </div>
+
   
-    </a>
-    <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE" 
-      method="POST"
-      >
-      <button type="submit">Delete this Entry</button>
-    </form>
-  </div> 
-  </div>
-  </div>
-  </body>
-</html>
+    <div class="entries-container">
+      <p><strong>Prompt:</strong> <%= entry.prompt.question %></p>
+      <p><strong>Answer:</strong> <%= entry.entry %></p>
 
+      <% if (entry.date) { %>
+        <p><strong>Date:</strong> <%= new Date(entry.date).toISOString().split('T')[0] %></p>
+      <% } %>
+
+      <p><strong>Visibility:</strong> <%= entry.public ? "Public" : "Private" %></p>
+
+      
+      <div class="entry-actions">
+        <a class="edit-link" href="/users/<%= user._id %>/entrys/<%= entry._id %>/edit">
+          Edit this Entry
+        </a>
+
+        <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=DELETE" method="POST">
+          <button type="submit" class="delete-button">Delete this Entry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

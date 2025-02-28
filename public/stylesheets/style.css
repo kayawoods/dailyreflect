@@ -201,25 +201,31 @@ button:hover {
   
   .all-entrys-header {
     display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 90%;
-    color: #FFFFFF; 
-    font-family: 'Ubuntu', sans-serif; 
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Centers items */
+    align-items: center; /* Centers items */
+    padding: 20px; /* Adds breathing room */
+    width: 100%;
+    color: #FFFFFF;
+    font-family: 'Ubuntu', sans-serif;
+}
 
-  }
-
-    
-  .all-entrys-header h1 {
+/* Style the h1 */
+.all-entrys-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: #1c2e5b; 
-    text-align: center; 
-    width: 100%; 
-    margin-bottom: 15px;
-  }
+    font-size: 2.5rem; /* Make it pop a bit more */
+    font-weight: 700;
+    color: #1c2e5b;
+    text-align: center;
+    width: fit-content; /* Prevent it from stretching */
+    padding: 10px 20px; /* Add spacing */
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Light text depth */
+    transition: transform 0.2s ease-in-out;
+}
+
   
   .add-entry-link {
     padding: 10px;
@@ -246,17 +252,20 @@ button:hover {
   }
 
   .entries-container {
-    width: 60%; 
-    max-width: 500px; 
-    background-color: rgba(255, 255, 255, 0.2); 
-    padding: 2px; 
-    border-radius: 15px; 
-    box-shadow: 4px 4px 10px rgba(0,0,0,0.3); 
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: center; 
-    text-align: left; 
+ 
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; 
+    font-weight: 700;
+    color: #1c2e5b;
+    text-align: center;
+    width: fit-content; 
+    padding: 10px 20px; 
+    background: rgba(255, 255, 255, 0.2); /* Light transparent background */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Light text depth */
+    transition: transform 0.2s ease-in-out;
+   
   }
   
   ul li a {
@@ -269,7 +278,7 @@ button:hover {
     padding: 10px 20px;
     margin: 15px 0;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
     display: block; 
   }
   ul > a, ul > a * {
@@ -386,7 +395,7 @@ button:hover {
   }
 
   .community-user {
-    background-color: #DAA520; 
+    background-color: #d9a520; 
     color: #1C1C1C; 
     padding: 10px;
     border-radius: 2px;
@@ -394,8 +403,8 @@ button:hover {
     font-size: 1.2em;
     font-weight: bold;
     text-align: center;
-    width: 50%;
-    max-width: 300px;
+    width: 100%;
+    max-width: 200px;
     font-family: 'Kalam', cursive;
     border: 2px solid #8A6F20; 
     display: block; 
@@ -407,7 +416,8 @@ button:hover {
     color: #1c2e5b; 
     font-family: 'Kalam', cursive; 
     display: block; 
-    padding: 2px; 
+    padding: 10px; 
+    width: 90%; 
     text-align: center; 
   }
 
