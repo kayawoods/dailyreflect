@@ -187,9 +187,15 @@ button:hover {
     width: 100%;
     height: 100vh; 
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://i.imgur.com/Tov2Hj3.jpeg) no-repeat center; 
+    url(https://i.imgur.com/mefcd4j.jpeg) no-repeat center; 
     background-size: cover; 
     background-color: #2c2c2c; 
+  }
+
+  .all.entrys-body {
+    padding: 20px; 
+    max-width: 800px; 
+    margin: auto; 
   }
   
   .all-entrys-header {
@@ -208,8 +214,8 @@ button:hover {
   .all-entrys-header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #1c2e5b; /* Dark blue */
-    text-align: center; /* Centers the text */
+    color: #1c2e5b; 
+    text-align: center; 
     width: 100%; 
     margin-bottom: 15px;
   }
@@ -237,24 +243,39 @@ button:hover {
     justify-content: center;
     align-items: center;
   }
+
+  .entries-container {
+    width: 60%; 
+    max-width: 500px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 2px; 
+    border-radius: 15px; 
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    justify-content: center; 
+    text-align: left; 
+  }
   
-  ul > a {
+  ul li a {
     font-family: 'Kalam', cursive;
     text-decoration: none;
     color: #1c2e5b;
-    width: 50%;
+    width: 100%;
     background-color: #E0E0E0;
     border-radius: 30px;
     padding: 10px 20px;
     margin: 15px 0;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    display: block; 
   }
   ul > a, ul > a * {
     font-family: 'Kalam', cursive; 
   }
   
-  ul > a:hover {
+  ul li a:hover {
     background-color: #4b598e;
     color: white;
   }
@@ -318,3 +339,80 @@ button:hover {
     height: 100%;
   }
 
+  .community-body {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
+    min-height: 100vh; 
+    background: white;
+    color: white; 
+    padding: 30px; 
+  }
+
+  .community-header {
+    font-size: 2.5em; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-family: 'Playfair Display', serif; 
+  }
+
+  .community-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 80%; 
+    max-width: 800px; 
+  }
+
+  .community-list {
+    list-style: none; 
+    width: 100%; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    align-items: center; 
+  }
+
+  community-user {
+    background: rgba(255,255,255,02); 
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3); 
+    font-size: 1.5em; 
+    font-weight: bold; 
+    text-align: center; 
+    width: 80%; 
+    max-width: 400px; 
+  }
+
+  .community-user a {
+    text-decoration: none; 
+    color: #1c2e5b; 
+    font-family: 'Kalam', cursive; 
+    display: block; 
+    padding: 10px; 
+  }
+
+  .back-link {
+    display: inline-block; 
+    font-weight: bold; 
+    background-color: #ce4866; 
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    color: white; 
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, transform 0.2 ease;
+    text-align: center; 
+    margin-top: 20px; 
+    cursor: url('https://abs.twimg.com/emoji/v2/72x72/270f.png'), auto; 
+  } 
+
+  .back-link:hover {
+    background-color: #e84a6c; 
+    transform: translateY(-2px); 
+    cursor: url('https://abs.twimg.com/emoji/v2/72x72/270f.png'), auto; 
+
+  }

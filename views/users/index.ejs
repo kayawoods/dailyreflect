@@ -7,13 +7,22 @@
     <title>Users Index</title>
   </head>
   <body>
-   
     <%- include('../partials/_navbar.ejs') %>
-   
-    <ul>
-        <% users.forEach(communityUser => { %>
-            <li><a href="/users/<%= user._id %>/users/<%= communityUser._id %>"><%= communityUser.username %></a></li>
+
+    <div class="community-body">
+      <h1 class="community-header">Explore Our Community</h1>
+
+      <div class="community-container"> 
+        <ul class="community-list">
+          <% users.forEach(communityUser => { %>
+            <li class="community-user">
+              <a href="/users/<%= user._id %>/users/<%= communityUser._id %>">
+                <%= communityUser.username %>
+              </a>
+            </li>
           <% }) %>
-      </ul>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
