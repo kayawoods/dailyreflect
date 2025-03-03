@@ -373,11 +373,11 @@ button:hover {
   .new-body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keep everything at the top */
+    justify-content: flex-start; 
     align-items: center;
     min-height: 100vh;
-    padding-top: 0px; /* Remove extra padding */
-    margin-top: 0px; /* Move the entire section up */
+    padding-top: 0px; 
+    margin-top: 0px; 
 }
   
   .new-body h1 {
@@ -459,77 +459,86 @@ button:hover {
   
  
   .community-body {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 100%; 
-    min-height: 100vh; 
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-       url('https://i.imgur.com/GFRL9ht.jpeg') no-repeat center;
-    color: white; 
-    padding: 30px; 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    font-family: 'Kalam', cursive; 
-  }
-
-  .community-header {
-    font-size: 2.5em; 
-    font-weight: bold; 
-    text-align: center; 
-    margin-bottom: 20px; 
-   
-  }
-
-  .community-container {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    width: 80%; 
-    max-width: 800px; 
-    font-family: 'Kalam', cursive; 
-    color: red; 
-  }
-
-  .community-list {
-    list-style: none; 
-    width: 100%; 
-    padding: 0; 
-    display: flex; 
-    flex-direction: column; 
-    gap: 15px; 
-    align-items: center; 
-    font-family: 'Kalam', cursive; 
-    text-align: center; 
-  }
-
-  .community-user {
-    background-color: #d9a520; 
-    color: #1C1C1C; 
-    padding: 10px;
-    border-radius: 2px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    max-width: 200px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)),
+        url(https://i.imgur.com/mefcd4j.jpeg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #1c1c1c;
     font-family: 'Kalam', cursive;
-    border: 2px solid #8A6F20; 
-    display: block; 
-    
+    padding-top: 60px;
 }
 
-  .community-user a {
-    text-decoration: none; 
-    color: #1c2e5b; 
-    font-family: 'Kalam', cursive; 
-    display: block; 
-    padding: 10px; 
-    width: 90%; 
-    text-align: center; 
-  }
+.community-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c2e5b;
+  text-align: center;
+  width: fit-content;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  margin-top: 20px;
+}
+
+.community-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  font-family: 'Kalam', cursive;
+}
+
+.community-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  font-family: 'Kalam', cursive;
+  text-align: center;
+}
+
+.community-user {
+  background: rgba(255, 255, 255, 0.2);
+  color: #1C1C1C;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  font-family: 'Kalam', cursive;
+  border: 2px solid #8A6F20;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.community-user a {
+  text-decoration: none;
+  color: #1c2e5b;
+  font-family: 'Kalam', cursive;
+  display: block;
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+}
+
+.community-user a:hover {
+  color: white;
+}
 
   .back-link {
     display: inline-block; 
