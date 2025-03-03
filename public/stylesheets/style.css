@@ -7,6 +7,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #AEAEAE;
+    background-image: url ('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true')
 }
 
 .index-body {
@@ -465,12 +466,13 @@ button:hover {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)),
-        url(https://i.imgur.com/mefcd4j.jpeg) no-repeat center;
+        url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     color: #1c1c1c;
     font-family: 'Kalam', cursive;
     padding-top: 60px;
+    
 }
 
 .community-header {
@@ -481,7 +483,7 @@ button:hover {
   text-align: center;
   width: fit-content;
   padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true') no-repeat center; 
   border-radius: 12px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -592,3 +594,10 @@ button:hover {
     border: 2px solid #1c2e5b;
     background-color: #ffffff;
     color: #1c2e5b; }
+
+    .community-entry-body {
+      background: url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true') no-repeat center;
+      background-size: cover;
+      background-attachment: fixed;
+      color: white; }
+  

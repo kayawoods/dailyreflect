@@ -14,7 +14,10 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+  background: url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true') no-repeat center;
+  background-size: cover;
 }
+
 
 .show-header {
   display: flex;
@@ -114,4 +117,8 @@ h2 {
   color: #1c2e5b;
   text-align: left;
   font-size: 1.2em;
+}
+
+.entry-card {
+  background-image: url ('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true');
 }
