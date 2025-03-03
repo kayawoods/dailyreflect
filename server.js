@@ -23,7 +23,6 @@ const path = require('path');
 mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connection.on('connected', () => {
-  console.log(`Connected to MongoDB ${mongoose.connection.name}.`);
 });
 
 app.use(express.urlencoded({ extended: false }));
@@ -55,5 +54,4 @@ app.use('/users/:userId/entrys', entrysController);
 app.use('/users/:userId/users', usersController);
 
 app.listen(port, () => {
-  console.log(`The express app is ready on port ${port}!`);
 });

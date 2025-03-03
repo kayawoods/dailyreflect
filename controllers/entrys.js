@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
       entrys: currentUser.entrys,
     });
   } catch (error) {
-    console.log(error);
     res.redirect('/');
   }
 });
@@ -20,7 +19,6 @@ router.get('/', async (req, res) => {
 router.get('/new', async (req, res) => {
   const prompts = await Prompt.find()
   const currentPrompt = prompts[Math.floor(Math.random() * prompts.length)]
-  console.log(currentPrompt)
   res.render('entrys/new.ejs', {
     prompt: currentPrompt
   });
@@ -42,7 +40,6 @@ router.post('/', async (req, res) => {
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/entrys`);
   } catch (error) {
-    console.log(error);
     res.redirect('/');
   }
 
@@ -59,7 +56,6 @@ router.get('/:entryId', async (req, res) => {
 
     });
   } catch (error) {
-    console.log(error);
     res.redirect('/');
   }
 });
@@ -71,7 +67,6 @@ router.delete('/:entryId', async (req, res) => {
     await currentUser.save();
     res.redirect(`/users/${currentUser._id}/entrys`);
   } catch (error) {
-    console.log(error);
     res.redirect('/');
   }
 });
@@ -84,7 +79,6 @@ router.get('/:entryId/edit', async (req, res) => {
       entry: entry,
     });
   } catch (error) {
-    console.log(error);
     res.redirect('/users');
   }
 });
@@ -104,7 +98,6 @@ router.put('/:entryId', async (req, res) => {
 
     res.redirect(`/users/${currentUser._id}/entrys`);
   } catch (error) {
-    console.log(error);
     res.redirect('/');
   }
 });

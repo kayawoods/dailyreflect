@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
         const allUsers = await User.find();
         res.render('users/index.ejs', { users: allUsers });
     } catch (error) {
-        console.log(error);
         res.redirect('/');
     }
 });
@@ -19,7 +18,6 @@ router.get('/:userId', async (req, res) => {
         const user = await User.findById(req.params.userId).populate('entrys.prompt')
         res.render('users/show.ejs', { user, entrys: user.entrys });
     } catch (error) {
-        console.log(error);
         res.redirect('/');
     }
 });
