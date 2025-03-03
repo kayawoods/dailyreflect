@@ -13,7 +13,7 @@ body {
 
 .index-body {
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05)), 
-  url('https://raw.githubusercontent.com/kayawoods/dailyreflect/main/Untitled%20design%20(6).png');
+  url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(10).png?raw=true');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -128,7 +128,7 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(8).png?raw=true') no-repeat center;
+    url('https://github.com/kayawoods/dailyreflect/blob/main/in%20image.png?raw=true') no-repeat center;
   font-size: 1.2rem;
   background-color: #969696;
   background-size: cover;
@@ -200,7 +200,7 @@ button:hover {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)),
-    url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(9).png?raw=true') no-repeat center;
+    url('https://github.com/kayawoods/dailyreflect/blob/main/entry%20image.png?raw=true') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   color: #1c1c1c;
@@ -287,7 +287,6 @@ ul {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 500;
-  color: #1c2e5b;
   text-align: left;
   width: 100%;
   max-width: 600px;
@@ -298,6 +297,8 @@ ul {
   transition: transform 0.2s ease-in-out;
   border-radius: 12px;
   margin: 20px auto;
+ background-color: rgb(243, 206, 136);
+ 
 }
 
 .entries-container p {
@@ -306,6 +307,7 @@ ul {
   line-height: 1.5;
   color: #333;
   margin-bottom: 10px;
+
 }
 
 .entries-container strong {
@@ -483,7 +485,7 @@ ul li a:hover {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)),
-    url('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true') no-repeat center;
+    url('https://github.com/kayawoods/dailyreflect/blob/main/blank%20background%20image.png?raw=true') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   color: #1c1c1c;
