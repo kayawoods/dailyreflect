@@ -1,5 +1,5 @@
 Answer the Question! A Daily Reflect
-![logo](https://file%2B.vscode-resource.vscode-cdn.net/var/folders/nk/1p063l1s7k91yxnwk3bqk0_40000gn/T/TemporaryItems/NSIRD_screencaptureui_PZvO40/Screenshot%202025-03-03%20at%2007.25.38.png?version%3D1741015556689)
+[logo](blob:https://imgur.com/1a7f2ed5-37e9-4148-b2b7-0c7028793311)
 
 
 Answer the Question!
