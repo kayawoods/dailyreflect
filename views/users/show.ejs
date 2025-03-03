@@ -5,34 +5,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/stylesheets/style.css" />
-  <title><%= user.username %>'s Entries</title>
+  <title>
+    <%= user.username %>'s Entries
+  </title>
 </head>
 
 <body>
   <%- include('../partials/_navbar.ejs') %>
 
-  <div class="show-body">
-    <h1 class="show-header"><%= user.username %>'s Entries</h1>
+    <div class="show-body">
+      <h1 class="show-header">
+        <%= user.username %>'s Entries
+      </h1>
 
-    <% if (entrys && entrys.length > 0) { %>
-      <div class="entries-container">
-        <% entrys.forEach(entry => { %>
-          <div class="entry-card">
-            <p><strong>Prompt:</strong> <%= entry.prompt.question %></p>
+      <% if (entrys && entrys.length> 0) { %>
+        <div class="entries-container">
+          <% entrys.forEach(entry=> { %>
+            <div class="entry-card">
+              <p><strong>Prompt:</strong>
+                <%= entry.prompt.question %>
+              </p>
 
-            <% if (entry.public === "Share") { %>
-              <p><strong>Answer:</strong> <%= entry.entry %></p>
-            <% } %>
+              <% if (entry.public==="Share" ) { %>
+                <p><strong>Answer:</strong>
+                  <%= entry.entry %>
+                </p>
+                <% } %>
 
-          </div>
-        <% }); %>
-      </div>
-    <% } else { %>
-      <p class="no-entries">No Entries</p>
-    <% } %>
+            </div>
+            <% }); %>
+        </div>
+        <% } else { %>
+          <p class="no-entries">No Entries</p>
+          <% } %>
 
-    <a class="back-link" href="/users/<%= user._id %>/entrys">Back to My Entries</a>
-  </div>
+            <a class="back-link" href="/users/<%= user._id %>/entrys">Back to My Entries</a>
+    </div>
 </body>
 
 </html>

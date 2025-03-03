@@ -7,14 +7,14 @@ const entrySchema = new mongoose.Schema({
   },
   entry: {
     type: String,
-    // maxlength: 1, 
+
   },
   public: {
     type: String,
     enum: ['Vault', 'Share'],
   },
   prompt: {
-    type: mongoose.Schema.Types.ObjectId, //need populate to show more 
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Prompt',
   },
 });

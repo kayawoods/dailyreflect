@@ -13,4 +13,3 @@ const Prompt = mongoose.model('Prompt', promptSchema);
 
 module.exports = Prompt;
 
-//might use in future. potentially delete database 
