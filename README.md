@@ -10,7 +10,8 @@ All your entries are saved on your page, where you can revisit them anytime—cl
 
 ## Getting Started 
 
-### [Reflect](https://daily-write-b40bfdcb6395.herokuapp.com/)
+### [Planning Materials](https://trello.com/b/XX56bmkt/skyrockit)
+### [Try out the Reflect](https://daily-write-b40bfdcb6395.herokuapp.com/)
 #### How to Play: 
 * Click "Add a New Entry" to start journaling.
 * A random prompt will appear at the top of the form.
