@@ -1,6 +1,6 @@
 Answer the Question! A Daily Reflect
 
-![LOGO](https://github.com/kayawoods/dailyreflect/blob/main/Screenshot%202025-03-02%20at%2020.57.22.png?raw=true)
+[LOGO](https://github.com/kayawoods/dailyreflect/blob/main/images/screenshot.png?raw=true)
 
 Answer the Question!
 
