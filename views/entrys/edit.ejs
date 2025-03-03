@@ -5,51 +5,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Editing <%= entry.entry %>
-    </title>
+    <title>Editing <%= entry.entry %></title>
 </head>
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <div class="edit-body">
-        <h1>Edit <%= entry.entry %>
-        </h1>
-        <form   action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=PUT"
-            method="POST">
+        <h1>Edit <%= entry.entry %></h1>
+        
+        <h3><%= entry.prompt.question %></h3> 
+        
+        <form action="/users/<%= user._id %>/entrys/<%= entry._id %>?_method=PUT" method="POST">
 
-           <input type="date" name="date" id="date" 
-       value="<%= entry.date ? new Date(entry.date).toISOString().split('T')[0] : '' %>" 
-       required> 
+            <input type="hidden" name="prompt" value="<%= entry.prompt._id %>" id="prompt" required>
 
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" 
+               value="<%= entry.date ? new Date(entry.date).toISOString().split('T')[0] : '' %>" 
+               required> 
 
-            <label for="entry"> 1 Sentence Entry:</label>
-            <textarea
-             name="entry"
-              id="entry" 
-              rows="3"
-              required
-             ><%= entry.entry %></textarea>
-               
-              
+            <label for="entry">Entry:</label>
+            <div class="entry-container">
+                <textarea name="entry" id="entry" rows="3" required><%= entry.entry %></textarea>
+            </div>
 
-            <label for="public">Share?:</label>
-            <select id="public" name="public" required>
-                <option 
-                value="Share" 
-                <%= entry.public === 'Share' ? 'selected' : '' %>
-            >
-                Share 🫂
-            </option>
-            <option 
-                value="Vault" 
-                <%= entry.public === 'Vault' ? 'selected' : '' %>
-            >
-                Vault 🔒
-            </option>
-        </select>
+            <label for="public">Status:</label>
+            <div class="share-container">
+                <select id="public" name="public" required>
+                    <option value="Share" <%= entry.public === 'Share' ? 'selected' : '' %>>Share 🫂</option>
+                    <option value="Vault" <%= entry.public === 'Vault' ? 'selected' : '' %>>Vault 🔒</option>
+                </select>
+            </div>
+
             <button type="submit">Submit</button>
         </form>
     </div>
 </body>
 
 </html>
+

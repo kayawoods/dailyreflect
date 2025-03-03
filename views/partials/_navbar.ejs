@@ -1,12 +1,12 @@
 <nav>
   <link rel="stylesheet" href="/stylesheets/partials.css" />
   <div class="navbar">
-    <h1 id="nav-header">Daily Write</h1>
+    <h1 id="nav-header">Daily Reflect</h1>
     <div class="nav-links">
     <% if(user) { %>
     <a class="authlink" href="/users/<%= user._id %>/entrys">Your Entries</a>
+    <a class="authlink" href="/users/<%=user._id%>/users">Explore the Community</a>
     <a class="authlink" href="/auth/sign-out">Sign Out</a>
-    <a class="authlink" href="/users/<%=user._id%>/users">Explore Our Community</a>
     <% } else { %>
     <a class="authlink" href="/auth/sign-in">Sign In</a>
     <a class="authlink" href="/auth/sign-up">Sign Up</a>
