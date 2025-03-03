@@ -1,6 +1,6 @@
 Answer the Question! A Daily Reflect
+![logo](https://file%2B.vscode-resource.vscode-cdn.net/var/folders/nk/1p063l1s7k91yxnwk3bqk0_40000gn/T/TemporaryItems/NSIRD_screencaptureui_PZvO40/Screenshot%202025-03-03%20at%2007.25.38.png?version%3D1741015556689)
 
-[LOGO](https://github.com/kayawoods/dailyreflect/blob/main/images/screenshot.png?raw=true)
 
 Answer the Question!
 
