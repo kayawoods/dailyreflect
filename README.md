@@ -1,5 +1,5 @@
 Answer the Question! A Daily Reflect
-![Logo](https://github.com/kayawoods/dailyreflect/blob/main/screenshot.png?raw=true)
+![Logo](https://github.com/kayawoods/dailyreflect /blob/main/screenshot.png?raw=true)
 
 
 Answer the Question!

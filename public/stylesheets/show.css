@@ -1,124 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  background-color: #9ac2ef;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
 }
 
 .show-body {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  justify-content: center;
   align-items: center;
-  background: url('https://github.com/kayawoods/dailyreflect/blob/main/blank%20background%20image.png?raw=true') no-repeat center;
-  background-size: cover;
+  width: 100%;
 }
 
-
 .show-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: 90%;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .show-header > h1 {
   color: #1c2e5b;
-  font-size: 3.4em;
-  margin-left: 10px;
+  font-size: 2.8em;
+  margin: 0;
 }
 
 .show-actions {
+  margin-top: 20px;
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0 0 30px;
+  gap: 15px;
 }
 
-button {
-  padding: 8px 10px;
+button, .show-actions > a {
   background-color: #ce4866;
   color: white;
+  padding: 10px 20px;
+  font-size: 1em;
   border-radius: 30px;
-  border: none;
-  font-size: 1.1em;
-  width: 10em;
-  margin: 5px;
-}
-
-button:hover {
-  background-color: #e84a6c;
-}
-
-.show-actions > a {
-  background-color: #4b598e;
-  color: white;
   text-decoration: none;
-  font-size: 1.1em;
-  padding: 8px 10px;
-  border-radius: 30px;
-  width: 10em;
-  text-align: center;
-  margin: 5px;
-  font-family: 'Poppins', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.show-actions > a:hover {
-  background-color: #1c2e5b;
+button:hover, .show-actions > a:hover {
+  background-color: #e84a6c;
+  transform: translateY(-2px);
+}
+
+.show-notes-container {
+  width: 90%;
+  margin-top: 30px;
+}
+
+.show-notes {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.show-notes > p {
+  color: #333;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
 p {
   color: #ce4866;
   font-weight: bold;
-  font-size: 1.4em;
-  margin: 10px 30px;
-  text-align: center;
-}
-
-.show-notes-container {
-  width: 90%;
-  margin: 20px 0;
-}
-
-.show-notes-container > a {
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-  font-size: 1.4em;
-  margin: 20px;
-}
-
-.show-notes-container > a:hover {
-  color: #4b598e;
-}
-
-.show-notes {
-  background-color: #f6e7e7;
-  width: 85%;
-  border-radius: 20px;
-  padding: 40px 40px 20px 40px;
-  margin: 20px 10px;
-}
-
-h2 {
-  margin: 0 10px;
-  color: #1c2e5b;
-}
-
-.show-notes > p {
-  font-weight: normal;
-  color: #1c2e5b;
-  text-align: left;
   font-size: 1.2em;
-}
-
-.entry-card {
-  background-image: url ('https://github.com/kayawoods/dailyreflect/blob/main/See%20prompt%20here%20(7).png?raw=true');
 }
